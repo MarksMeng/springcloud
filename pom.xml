@@ -6,6 +6,8 @@
         <module>eurekaserver</module>
         <module>configserver</module>
         <module>apigateway</module>
+        <module>oauth</module>
+        <module>vue_element_admin</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

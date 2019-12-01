@@ -32,11 +32,11 @@ public class TokenFilter extends ZuulFilter {
         HttpServletRequest request = requestContext.getRequest();
 
         //业务处理
-        String token = request.getParameter("token");
-        if(StringUtils.isEmpty(token)){
-            requestContext.setSendZuulResponse(false);
-            requestContext.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
-        }
+//        String token = request.getParameter("token");
+//        if(StringUtils.isEmpty(token)){
+//            requestContext.setSendZuulResponse(false);
+//            requestContext.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
+//        }
         return null;
     }
 }

@@ -1,22 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99a39b01-fdac-49c5-810b-0cf7980f6740" name="Default Changelist" comment="" />
+    <list default="true" id="99a39b01-fdac-49c5-810b-0cf7980f6740" name="Default Changelist" comment="add .gitignore">
+      <change afterPath="$PROJECT_DIR$/oauth/oauth.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/pangzi/oauth/OauthApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/VO/LoginVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/VO/ResultData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/VueElementAdminApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/controller/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/entity/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/mapper/MenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/MenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/pangzi/apigateway/filter/TokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/src/main/java/com/pangzi/apigateway/filter/TokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/target/classes/com/pangzi/apigateway/filter/TokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/target/classes/com/pangzi/apigateway/filter/TokenFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="vue_element_admin: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/config" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -29,13 +91,36 @@
     </option>
   </component>
   <component name="ProjectId" id="1Tn2cW8vsj8k2w8SDIjl1l8RuZj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vue_element_admin/src/main/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pangzi.vue_element_admin.VO" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vue_element_admin/src/main/resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,7 +134,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.VueElementAdminApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="apigateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.pangzi.apigateway.ApiGatewayApplication" />
@@ -74,6 +159,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OauthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="oauth" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pangzi.oauth.OauthApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VueElementAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="vue_element_admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pangzi.vue_element_admin.VueElementAdminApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eurekaserver" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.pangzi.springcloud.eurekaserver.EurekaServerApplication" />
@@ -86,6 +187,8 @@
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.OauthApplication" />
+      <item itemvalue="Spring Boot.VueElementAdminApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -98,8 +201,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574081618477</updated>
-      <workItem from="1574081621980" duration="7542000" />
+      <workItem from="1574081621980" duration="8410000" />
+      <workItem from="1575100689194" duration="11226000" />
     </task>
+    <task id="LOCAL-00001" summary="add .gitignore">
+      <created>1574090884607</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574090884607</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,10 +222,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore" />
   </component>
 </project>

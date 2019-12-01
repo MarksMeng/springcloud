@@ -8,14 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eurekaserver" />
         <module name="configserver" />
+        <module name="oauth" />
         <module name="apigateway" />
+        <module name="vue_element_admin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="apigateway" target="1.8" />
       <module name="configserver" target="1.8" />
       <module name="eurekaserver" target="1.8" />
+      <module name="oauth" target="1.8" />
       <module name="springcloud" target="1.8" />
+      <module name="vue_element_admin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
