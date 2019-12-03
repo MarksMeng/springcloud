@@ -1,25 +1,26 @@
 package com.pangzi.vue_element_admin.controller;
 
 import com.pangzi.vue_element_admin.VO.ResultData;
-import com.pangzi.vue_element_admin.service.MenuService;
+import com.pangzi.vue_element_admin.VO.UserListQueryVO;
+import com.pangzi.vue_element_admin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("menu")
 @CrossOrigin
-public class MenuController {
+@RestController
+@RequestMapping("user")
+public class UserController {
 
     @Autowired
-    private MenuService menuService;
+    private UserService userService;
 
-    @GetMapping(value = "tree")
-    public ResultData getMenuTree(){
+    @GetMapping(value = "users")
+    public ResultData getUsersByPage(UserListQueryVO userListQueryVO){
         ResultData resultData = new ResultData();
-        resultData.setData(menuService.findMenuTree());
+        resultData.setData(userService.findAllByUserName(userListQueryVO));
         return resultData;
     }
 }

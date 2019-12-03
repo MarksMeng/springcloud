@@ -19,6 +19,30 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     public List<Menu> findMenuTree() {
-        return menuMapper.findMenuList();
+        List<Menu> menuList = menuMapper.findMenuList();
+        return menuListToTree(menuList);
+    }
+
+    private List<Menu> menuListToTree(List<Menu> menuList){
+        List<Menu> menuTree = new ArrayList<>();
+        for (Menu menu:menuList){
+            if(menu.getParentId()==null){
+                menuTree.add(menu);
+            }else{
+                for (Menu menu1:menuTree){
+                    if(menu1.getId() == menu.getParentId()){
+                        if(menu1.getChildren() == null){
+                            List<Menu> menuTemp = new ArrayList<>();
+                            menuTemp.add(menu);
+                            menu1.setChildren(menuTemp);
+                        }else{
+                            menu1.getChildren().add(menu);
+                        }
+
+                    }
+                }
+            }
+        }
+        return menuTree;
     }
 }

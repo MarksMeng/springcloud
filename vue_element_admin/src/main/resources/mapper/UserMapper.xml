@@ -8,4 +8,13 @@
     <select id="findOneByUserName" parameterType="java.lang.String" resultType="com.pangzi.vue_element_admin.entity.User">
         SELECT * FROM user where user_name = #{userName}
     </select>
+
+    <select id="findAllByUserName" parameterType="java.lang.String" resultType="com.pangzi.vue_element_admin.entity.User">
+        SELECT * FROM user
+        <where>
+            <if test="userName!=null || userName !=''">
+                user_name like concat('%',#{userName,jdbcType=VARCHAR},'%')
+            </if>
+        </where>
+    </select>
 </mapper>

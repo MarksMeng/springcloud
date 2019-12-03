@@ -14,4 +14,12 @@ public class User implements Serializable {
     private String password;
 
     private String token;
+
+    private String email;
+
+    private String mobile;
+
+    private String roleName;
+
+    private Boolean state;
 }
