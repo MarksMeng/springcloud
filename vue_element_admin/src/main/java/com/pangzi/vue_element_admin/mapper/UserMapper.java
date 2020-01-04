@@ -16,4 +16,14 @@ public interface UserMapper {
     User findOneByUserName(@Param("userName") String userName);
 
     List<User> findAllByUserName(@Param("userName") String userName);
+
+    void changeUserState(@Param("id") Integer id, @Param("state") Boolean state);
+
+    void addOneUser(User user);
+
+    User findUserById(Integer id);
+
+    void updateUserInfoById(@Param("id") Integer id, @Param("email") String email,@Param("mobile") String mobile);
+
+    void deleteUserById(Integer id);
 }

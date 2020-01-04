@@ -17,4 +17,24 @@
             </if>
         </where>
     </select>
+
+    <update id="changeUserState">
+        update user set state = #{state} where id = #{id}
+    </update>
+
+    <insert id="addOneUser" parameterType="com.pangzi.vue_element_admin.entity.User">
+        insert into user(user_name,password,email,mobile,state) values (#{userName},#{password},#{email},#{mobile},#{state})
+    </insert>
+
+    <select id="findUserById" parameterType="java.lang.Integer" resultType="com.pangzi.vue_element_admin.entity.User">
+        select * from user where id = #{id}
+    </select>
+
+    <update id="updateUserInfoById">
+        update user set email = #{email} , mobile = #{mobile} where id = #{id}
+    </update>
+
+    <delete id="deleteUserById">
+        delete from user where id = #{id}
+    </delete>
 </mapper>
