@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pangzi.vue_element_admin.mapper.RoleMapper">
+    <select id="findRoleList" resultType="com.pangzi.vue_element_admin.entity.Role">
+        SELECT * FROM role
+    </select>
+
+    <insert id="insertOneRole" parameterType="com.pangzi.vue_element_admin.entity.Role">
+        insert into role(role_name, role_desc) values (#{roleName},#{roleDesc})
+    </insert>
+
+    <select id="findRoleById" resultType="com.pangzi.vue_element_admin.entity.Role">
+        SELECT * FROM role where id = #{id}
+    </select>
+
+    <update id="updateRoleInfoById">
+        update role set role_name=#{roleName},role_desc=#{roleDesc} where id = #{id}
+    </update>
+
+    <delete id="deleteRoleInfoById">
+        delete from role where id = #{id}
+    </delete>
+
+    <select id="findRoleOfUserByUserId" resultType="com.pangzi.vue_element_admin.entity.Role">
+        select r.* from role r left join user_role ur on r.id=ur.rid where ur.uid = #{userId}
+    </select>
+</mapper>

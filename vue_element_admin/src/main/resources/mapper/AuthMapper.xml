@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pangzi.vue_element_admin.mapper.AuthMapper">
+    <select id="findAuthList" resultType="com.pangzi.vue_element_admin.entity.Auth">
+        SELECT * FROM auth
+    </select>
+
+    <select id="findAuthById" resultType="com.pangzi.vue_element_admin.entity.Auth">
+        select * from auth where id = #{id}
+    </select>
+</mapper>

@@ -2,10 +2,14 @@ package com.pangzi.vue_element_admin.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.pangzi.vue_element_admin.VO.RoleVo;
 import com.pangzi.vue_element_admin.VO.UserListQueryVO;
 import com.pangzi.vue_element_admin.VO.UserVO;
+import com.pangzi.vue_element_admin.entity.Role;
 import com.pangzi.vue_element_admin.entity.User;
+import com.pangzi.vue_element_admin.mapper.RoleMapper;
 import com.pangzi.vue_element_admin.mapper.UserMapper;
+import com.pangzi.vue_element_admin.mapper.UserRoleMapper;
 import com.pangzi.vue_element_admin.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -20,7 +24,10 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
-
+    @Autowired
+    private RoleMapper roleMapper;
+    @Autowired
+    private UserRoleMapper userRoleMapper;
 
     @Override
     public List<User> findAll() {
@@ -36,6 +43,13 @@ public class UserServiceImpl implements UserService {
     public PageInfo<User> findAllByUserName(UserListQueryVO userListQueryVO) {
         PageHelper.startPage(userListQueryVO.getPageNum(), userListQueryVO.getPageSize());
         List<User> userList = userMapper.findAllByUserName(userListQueryVO.getQuery());
+        for(User user:userList){
+            List<Role> roleListOfUser = roleMapper.findRoleOfUserByUserId(user.getId());
+            if(!roleListOfUser.isEmpty()){
+                //选择第一个角色名
+                user.setRoleName(roleListOfUser.get(0).getRoleName());
+            }
+        }
         return new PageInfo<User>(userList);
     }
 
@@ -65,5 +79,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUserById(Integer id){
         userMapper.deleteUserById(id);
+    }
+
+    @Override
+    public void editRoleOfUser(Integer id, RoleVo roleVo){
+        userRoleMapper.updateRoleOfUser(id,roleVo.getRid(),roleVo.getOldRoleName());
     }
 }

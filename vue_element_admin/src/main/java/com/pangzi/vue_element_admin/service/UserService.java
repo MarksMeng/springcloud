@@ -1,6 +1,7 @@
 package com.pangzi.vue_element_admin.service;
 
 import com.github.pagehelper.PageInfo;
+import com.pangzi.vue_element_admin.VO.RoleVo;
 import com.pangzi.vue_element_admin.VO.UserListQueryVO;
 import com.pangzi.vue_element_admin.VO.UserVO;
 import com.pangzi.vue_element_admin.entity.User;
@@ -64,4 +65,11 @@ public interface UserService {
      * @param id
      */
     void deleteUserById(Integer id);
+
+    /**
+     * 更新用户的角色信息
+     * @param id
+     * @param roleVo
+     */
+    void editRoleOfUser(Integer id, RoleVo roleVo);
 }

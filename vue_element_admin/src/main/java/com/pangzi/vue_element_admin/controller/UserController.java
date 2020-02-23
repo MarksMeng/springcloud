@@ -1,11 +1,13 @@
 package com.pangzi.vue_element_admin.controller;
 
 import com.pangzi.vue_element_admin.VO.ResultData;
+import com.pangzi.vue_element_admin.VO.RoleVo;
 import com.pangzi.vue_element_admin.VO.UserVO;
 import com.pangzi.vue_element_admin.VO.UserListQueryVO;
 import com.pangzi.vue_element_admin.entity.ResponseStatus;
 import com.pangzi.vue_element_admin.entity.User;
 import com.pangzi.vue_element_admin.service.UserService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -84,6 +86,19 @@ public class UserController {
         ResultData resultData = new ResultData();
         try {
             userService.deleteUserById(id);
+        }catch (Exception e){
+            e.printStackTrace();
+            resultData.setCode(ResponseStatus.ERROR.getCode());
+            resultData.setMessage("删除用户失败");
+        }
+        return resultData;
+    }
+
+    @PutMapping(value = "{id}/role")
+    public ResultData editRoleOfUser(@PathVariable("id") Integer id, @RequestBody RoleVo roleVo){
+        ResultData resultData = new ResultData();
+        try {
+            userService.editRoleOfUser(id,roleVo);
         }catch (Exception e){
             e.printStackTrace();
             resultData.setCode(ResponseStatus.ERROR.getCode());
