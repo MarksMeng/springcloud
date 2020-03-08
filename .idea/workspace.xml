@@ -1,36 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99a39b01-fdac-49c5-810b-0cf7980f6740" name="Default Changelist" comment="add .gitignore">
-      <change afterPath="$PROJECT_DIR$/oauth/oauth.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/main/java/com/pangzi/oauth/OauthApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oauth/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/VO/LoginVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/VO/ResultData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/VueElementAdminApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/controller/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/entity/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/mapper/MenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="99a39b01-fdac-49c5-810b-0cf7980f6740" name="Default Changelist" comment="权限相关功能 完成">
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/VO/CateListVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/VO/CateVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/controller/GoodsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/entity/GoodsCate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/mapper/GoodsCateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/GoodsCateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/impl/GoodsCateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/util/CateListToTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_element_admin/src/main/resources/mapper/GoodsCateMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/pangzi/apigateway/filter/TokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/src/main/java/com/pangzi/apigateway/filter/TokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigateway/target/classes/com/pangzi/apigateway/filter/TokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/target/classes/com/pangzi/apigateway/filter/TokenFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +46,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="vue_element_admin: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="vue_element_admin: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="goods_cate: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -72,6 +60,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -191,6 +180,31 @@
       <item itemvalue="Spring Boot.VueElementAdminApplication" />
     </list>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5689e393" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5689e393" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4f9a9b68" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5689e393" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1734dcdf" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -202,7 +216,12 @@
       <option name="presentableId" value="Default" />
       <updated>1574081618477</updated>
       <workItem from="1574081621980" duration="8410000" />
-      <workItem from="1575100689194" duration="11226000" />
+      <workItem from="1575100689194" duration="21380000" />
+      <workItem from="1575467085981" duration="2235000" />
+      <workItem from="1577614448583" duration="35173000" />
+      <workItem from="1579015350808" duration="2064000" />
+      <workItem from="1580007835220" duration="995000" />
+      <workItem from="1582432674375" duration="21451000" />
     </task>
     <task id="LOCAL-00001" summary="add .gitignore">
       <created>1574090884607</created>
@@ -211,7 +230,42 @@
       <option name="project" value="LOCAL" />
       <updated>1574090884607</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加auth模块">
+      <created>1575214904833</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575214904834</updated>
+    </task>
+    <task id="LOCAL-00003" summary="添加vue_element_admin项目">
+      <created>1575214958096</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575214958096</updated>
+    </task>
+    <task id="LOCAL-00004" summary="用户列表页接口">
+      <created>1575389583870</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575389583870</updated>
+    </task>
+    <task id="LOCAL-00005" summary="用户列表页接口 完成">
+      <created>1578137102361</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578137102361</updated>
+    </task>
+    <task id="LOCAL-00006" summary="权限相关功能 完成">
+      <created>1582440217749</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582440217750</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +287,47 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore" />
+    <MESSAGE value="添加auth模块" />
+    <MESSAGE value="添加vue_element_admin项目" />
+    <MESSAGE value="用户列表页接口" />
+    <MESSAGE value="用户列表页接口 完成" />
+    <MESSAGE value="权限相关功能 完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限相关功能 完成" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/impl/RoleServiceImpl.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/util/CateListToTree.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/controller/GoodsController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/controller/GoodsController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/impl/GoodsCateServiceImpl.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vue_element_admin/src/main/java/com/pangzi/vue_element_admin/service/impl/GoodsCateServiceImpl.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

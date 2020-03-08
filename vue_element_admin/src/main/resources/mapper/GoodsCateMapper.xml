@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pangzi.vue_element_admin.mapper.GoodsCateMapper">
+
+    <select id="getGoodsCateListOfLevel1" parameterType="java.lang.Integer" resultType="com.pangzi.vue_element_admin.entity.GoodsCate">
+        select * from goods_cate where cate_level =1
+    </select>
+
+    <select id="getGoodsCateListByPid" parameterType="java.lang.Integer" resultType="com.pangzi.vue_element_admin.entity.GoodsCate">
+        select * from goods_cate where cate_pid = #{catePid}
+    </select>
+
+    <insert id="insertNewCate" parameterType="com.pangzi.vue_element_admin.VO.CateVO">
+        insert into goods_cate(cate_name, cate_level, cate_pid, cate_delete) VALUES (#{cateName},#{cateLevel},#{catePid},1)
+    </insert>
+
+    <update id="updateCateNameByCateId">
+        update goods_cate set cate_name=#{cateName} where cate_id=#{cateId}
+    </update>
+
+    <delete id="deleteGoodsCateByCateIdList">
+        delete from goods_cate where cate_id in
+        <foreach collection="cateIdList" separator="," open="(" close=")" item="cateId">
+            #{cateId}
+        </foreach>
+    </delete>
+</mapper>
