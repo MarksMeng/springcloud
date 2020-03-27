@@ -117,7 +117,7 @@ public class GoodsController {
     public ResultData updateAttributesByAttrIdAndCateId(@PathVariable("cateId")Integer cateId,@PathVariable("attrId")Integer attrId, @RequestBody GoodsAttr goodsAttr){
         ResultData resultData = new ResultData();
         try {
-            goodsAttrService.updateAttributesByAttrIdAndCateId(cateId,attrId,goodsAttr);
+            goodsAttrService.updateAttributesByAttrIdAndCateId(cateId,attrId,goodsAttr)
         }catch (Exception e){
             e.printStackTrace();
             resultData.setCode(ResponseStatus.ERROR.getCode());
