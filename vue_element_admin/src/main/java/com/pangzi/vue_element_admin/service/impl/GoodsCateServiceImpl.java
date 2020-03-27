@@ -21,12 +21,12 @@ public class GoodsCateServiceImpl implements GoodsCateService {
     private GoodsCateMapper goodsCateMapper;
 
     @Override
-    public PageInfo<GoodsCate> getGoodsCateList(CateListVo cateListVo) throws Exception{
-        PageHelper.startPage(cateListVo.getPageNum(),cateListVo.getPageSize());
+    public PageInfo<GoodsCate> getGoodsCateList(CateListVo cateListVo) throws Exception {
+        PageHelper.startPage(cateListVo.getPageNum(), cateListVo.getPageSize());
         List<GoodsCate> goodsCateList = goodsCateMapper.getGoodsCateListOfLevel1();
-        for(GoodsCate goodsCate:goodsCateList){
+        for (GoodsCate goodsCate : goodsCateList) {
             List<GoodsCate> goodsCateListSec = goodsCateMapper.getGoodsCateListByPid(goodsCate.getCateId());
-            for (GoodsCate goodsCateChildren: goodsCateListSec){
+            for (GoodsCate goodsCateChildren : goodsCateListSec) {
                 List<GoodsCate> goodsCateListThr = goodsCateMapper.getGoodsCateListByPid(goodsCateChildren.getCateId());
                 goodsCateChildren.setChildren(goodsCateListThr);
             }
@@ -36,42 +36,48 @@ public class GoodsCateServiceImpl implements GoodsCateService {
     }
 
     @Override
-    public List<GoodsCate> getParentCateList() throws Exception{
+    public List<GoodsCate> getParentCateList(Integer cateLevel) throws Exception {
         List<GoodsCate> goodsCateList = goodsCateMapper.getGoodsCateListOfLevel1();
-        for(GoodsCate goodsCate:goodsCateList){
+        for (GoodsCate goodsCate : goodsCateList) {
             List<GoodsCate> goodsCateListSec = goodsCateMapper.getGoodsCateListByPid(goodsCate.getCateId());
             goodsCate.setChildren(goodsCateListSec);
+            if (cateLevel == 3) {
+                for (GoodsCate goodsCate2 : goodsCateListSec) {
+                    List<GoodsCate> goodsCateListThr = goodsCateMapper.getGoodsCateListByPid(goodsCate2.getCateId());
+                    goodsCate2.setChildren(goodsCateListThr);
+                }
+            }
         }
         return goodsCateList;
     }
 
     @Override
-    public void addCate(CateVO cateVO) throws Exception{
+    public void addCate(CateVO cateVO) throws Exception {
         goodsCateMapper.insertNewCate(cateVO);
     }
 
     @Override
-    public void updateCateNameByCateId(Integer cateId,String cateName) throws Exception{
-        goodsCateMapper.updateCateNameByCateId(cateId,cateName);
+    public void updateCateNameByCateId(Integer cateId, String cateName) throws Exception {
+        goodsCateMapper.updateCateNameByCateId(cateId, cateName);
     }
 
     @Override
-    public void deleteCateByCateId(Integer cateId) throws Exception{
+    public void deleteCateByCateId(Integer cateId) throws Exception {
         List<Integer> cateIdList = new ArrayList<>();
         cateIdList.add(cateId);
         List<GoodsCate> goodsCateList = goodsCateMapper.getGoodsCateListByPid(cateId);
-        for(GoodsCate goodsCate:goodsCateList){
+        for (GoodsCate goodsCate : goodsCateList) {
             cateIdList.add(goodsCate.getCateId());
-            if(goodsCate.getCateLevel()!=3){
+            if (goodsCate.getCateLevel() != 3) {
                 List<GoodsCate> goodsCateList1 = goodsCateMapper.getGoodsCateListByPid(goodsCate.getCateId());
-                for(GoodsCate goodsCate2:goodsCateList1){
+                for (GoodsCate goodsCate2 : goodsCateList1) {
                     cateIdList.add(goodsCate2.getCateId());
                 }
             }
         }
-        if(cateIdList!=null && !cateIdList.isEmpty() ){
+        if (cateIdList != null && !cateIdList.isEmpty()) {
             goodsCateMapper.deleteGoodsCateByCateIdList(cateIdList);
-        }else{
+        } else {
             throw new RuntimeException("cateId 为空");
         }
     }

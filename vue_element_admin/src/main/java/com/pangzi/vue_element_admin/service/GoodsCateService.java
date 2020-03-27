@@ -15,7 +15,7 @@ public interface GoodsCateService {
      * 获取一级和二级分类并以树的形式返回
      * @return
      */
-    List<GoodsCate> getParentCateList() throws Exception;
+    List<GoodsCate> getParentCateList(Integer cateLevel) throws Exception;
 
     void addCate(CateVO cateVO) throws Exception;
 
