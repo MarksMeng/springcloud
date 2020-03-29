@@ -2,13 +2,21 @@ package com.pangzi.vue_element_admin.controller;
 
 import com.pangzi.vue_element_admin.VO.CateListVo;
 import com.pangzi.vue_element_admin.VO.CateVO;
+import com.pangzi.vue_element_admin.VO.GoodsQueryVO;
 import com.pangzi.vue_element_admin.VO.ResultData;
+import com.pangzi.vue_element_admin.entity.Goods;
 import com.pangzi.vue_element_admin.entity.GoodsAttr;
 import com.pangzi.vue_element_admin.entity.ResponseStatus;
 import com.pangzi.vue_element_admin.service.GoodsAttrService;
 import com.pangzi.vue_element_admin.service.GoodsCateService;
+import com.pangzi.vue_element_admin.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @CrossOrigin
 @RestController
@@ -20,6 +28,9 @@ public class GoodsController {
 
     @Autowired
     private GoodsAttrService goodsAttrService;
+
+    @Autowired
+    private GoodsService goodsService;
 
     @GetMapping("/categories")
     public ResultData getCateList(CateListVo cateListVo){
@@ -138,4 +149,70 @@ public class GoodsController {
         }
         return resultData;
     }
+
+    @GetMapping("goodsList")
+    public ResultData getGoodsListByPage(GoodsQueryVO goodsQueryVO){
+        ResultData resultData = new ResultData();
+        try {
+            resultData.setData(goodsService.getGoodsListByPage(goodsQueryVO));
+        }catch (Exception e){
+            e.printStackTrace();
+            resultData.setCode(ResponseStatus.ERROR.getCode());
+            resultData.setMessage(e.getMessage());
+        }
+        return resultData;
+    }
+
+    @DeleteMapping("delete/{goodsId}")
+    public ResultData deleteGoodsByGoodsId(@PathVariable("goodsId")Integer goodsId){
+        ResultData resultData = new ResultData();
+        try {
+            goodsService.deleteGoodsByGoodsId(goodsId);
+        }catch (Exception e){
+            e.printStackTrace();
+            resultData.setCode(ResponseStatus.ERROR.getCode());
+            resultData.setMessage(e.getMessage());
+        }
+        return resultData;
+    }
+
+    @PostMapping("upload")
+    public ResultData uploadImage(MultipartFile file){
+        ResultData resultData = new ResultData();
+        try {
+            resultData.setData(goodsService.uploadImage(file));
+        }catch (Exception e){
+            e.printStackTrace();
+            resultData.setCode(ResponseStatus.ERROR.getCode());
+            resultData.setMessage(e.getMessage());
+        }
+        return resultData;
+    }
+
+    @DeleteMapping("img/delete")
+    public ResultData deleteImg(@RequestParam("filePath") String filePath){
+        ResultData resultData = new ResultData();
+        try {
+            goodsService.deleteImg(filePath);
+        }catch (Exception e){
+            e.printStackTrace();
+            resultData.setCode(ResponseStatus.ERROR.getCode());
+            resultData.setMessage(e.getMessage());
+        }
+        return resultData;
+    }
+
+    @PostMapping("save")
+    public ResultData saveGoods(@RequestBody Goods goods){
+        ResultData resultData = new ResultData();
+        try{
+            goodsService.saveGoods(goods);
+        }catch (Exception e){
+            e.printStackTrace();
+            resultData.setCode(ResponseStatus.ERROR.getCode());
+            resultData.setMessage(e.getMessage());
+        }
+        return resultData;
+    }
+
 }

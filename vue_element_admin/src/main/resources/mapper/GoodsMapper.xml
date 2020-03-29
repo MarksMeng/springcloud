@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pangzi.vue_element_admin.mapper.GoodsMapper">
+    <select id="getGoodsListByPage"
+            resultType="com.pangzi.vue_element_admin.entity.Goods">
+        select
+        goods_id,
+        goods_name,
+        goods_price,
+        goods_number,
+        goods_weight,
+        cate_id,
+        goods_introduce,
+        pics,
+        is_del,
+        add_time,
+        upd_time,
+        delete_time,
+        cat_one_id,
+        cat_two_id,
+        cat_three_id,
+        hot_number,
+        is_promote,
+        goods_state
+        from goods
+        <if test="goodsName!=null and goodsName!=''">
+            where goods_name like concat('%',#{goodsName},'%')
+        </if>
+    </select>
+
+    <delete id="deleteGoodsByGoodsId" parameterType="java.lang.Integer">
+        delete from goods where goods_id = #{goodsId}
+    </delete>
+
+    <insert id="saveGoods" parameterType="com.pangzi.vue_element_admin.entity.Goods" keyProperty="goodsId" useGeneratedKeys="true">
+        insert into goods(
+        goods_name,
+        goods_price,
+        goods_number,
+        goods_weight,
+        cate_id,
+        goods_introduce,
+        pics,
+        is_del,
+        add_time,
+        upd_time,
+        delete_time,
+        cat_one_id,
+        cat_two_id,
+        cat_three_id,
+        hot_number,
+        is_promote,
+        goods_state
+        ) values (
+        #{goodsName},
+        #{goodsPrice},
+        #{goodsNumber},
+        #{goodsWeight},
+        #{cateId},
+        #{goodsIntroduce},
+        #{pics},
+        #{isDel},
+        #{addTime},
+        #{updTime},
+        #{deleteTime},
+        #{catOneId},
+        #{catTwoId},
+        #{catThreeId},
+        #{hotNumber},
+        #{isPromote},
+        #{goodsState}
+        )
+    </insert>
+</mapper>
